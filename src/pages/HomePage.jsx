@@ -17,20 +17,20 @@ function HomePage() {
 
   return (
     <>
-      <section className="shell relative min-h-[calc(100vh-8rem)] pb-16 pt-8">
-        <div className="grid items-end gap-12 lg:grid-cols-[1.15fr_0.85fr]">
-          <Reveal className="relative z-10 max-w-3xl py-14 lg:py-20">
-            <span className="text-xs font-semibold uppercase tracking-[0.42em] text-gold">
+      <section className="shell relative min-h-[calc(100vh-8rem)] pb-14 pt-4 sm:pb-16 sm:pt-8">
+        <div className="grid items-end gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:gap-12">
+          <Reveal className="relative z-10 max-w-3xl py-8 sm:py-14 lg:py-20">
+            <span className="text-[11px] font-semibold uppercase tracking-[0.34em] text-gold sm:text-xs sm:tracking-[0.42em]">
               Interior Design Company
             </span>
-            <h1 className="mt-6 font-display text-[3.6rem] leading-[0.92] sm:text-[5rem] lg:text-[6.5rem]">
+            <h1 className="mt-5 max-w-[11ch] font-display text-[3.5rem] leading-[0.94] sm:mt-6 sm:max-w-none sm:text-[5rem] sm:leading-[0.92] lg:text-[6.5rem]">
               Transforming Spaces Into Experiences
             </h1>
-            <p className="mt-6 max-w-2xl text-base leading-8 text-[#1d3d3e] dark:text-[#dff2ef] sm:text-lg">
+            <p className="mt-5 max-w-xl text-[15px] leading-8 text-[#1d3d3e] dark:text-[#dff2ef] sm:mt-6 sm:max-w-2xl sm:text-lg">
               Doozy Designs creates premium residential and commercial interiors with a refined blend of modern
               minimalism, curated textures, and hospitality-level detail.
             </p>
-            <div className="mt-10 flex flex-wrap gap-4">
+            <div className="mt-8 flex flex-col gap-3 sm:mt-10 sm:flex-row sm:flex-wrap sm:gap-4">
               <Link to="/portfolio" className="button-primary">
                 View Projects
               </Link>
@@ -38,7 +38,7 @@ function HomePage() {
                 Get a Quote
               </Link>
             </div>
-            <div className="mt-14 grid gap-8 border-t border-black/10 pt-8 dark:border-white/10 sm:grid-cols-3">
+            <div className="mt-10 grid gap-6 border-t border-black/10 pt-6 dark:border-white/10 sm:mt-14 sm:gap-8 sm:pt-8 sm:grid-cols-3">
               {stats.map((stat) => (
                 <div key={stat.label}>
                   <p className="font-display text-4xl sm:text-5xl">{stat.value}</p>
@@ -51,15 +51,15 @@ function HomePage() {
           </Reveal>
 
           <Reveal className="relative">
-            <div className="relative overflow-hidden rounded-[2rem] border border-white/20 shadow-luxe">
+            <div className="relative overflow-hidden rounded-[1.8rem] border border-white/20 shadow-luxe sm:rounded-[2rem]">
               <img
                 src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1400&q=80"
                 alt="Luxury interior"
-                className="h-[70vh] min-h-[540px] w-full object-cover"
+                className="h-[58vh] min-h-[420px] w-full object-cover sm:h-[70vh] sm:min-h-[540px]"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-black/15" />
-              <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8">
-                <div className="glass-panel max-w-sm rounded-[1.6rem] p-6 text-white backdrop-blur-md">
+              <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-8">
+                <div className="glass-panel max-w-sm rounded-[1.4rem] p-4 text-white backdrop-blur-md sm:rounded-[1.6rem] sm:p-6">
                   <p className="text-xs uppercase tracking-[0.34em] text-gold">Signature Approach</p>
                   <p className="mt-4 text-sm leading-7 text-white/78">
                     Intelligent space planning, museum-grade styling, and calm, elevated material palettes.
