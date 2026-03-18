@@ -70,6 +70,35 @@ export function Icon({ name, className = "h-6 w-6" }) {
           <path strokeLinecap="round" strokeLinejoin="round" d="M9 11H5.75A2.75 2.75 0 0 1 8.5 8.25V7A4 4 0 0 0 4.5 11v6H9v-6Zm10 0h-3.25a2.75 2.75 0 0 1 2.75-2.75V7a4 4 0 0 0-4 4v6H19v-6Z" />
         </svg>
       );
+    case "whatsapp":
+      return (
+        <svg {...props} viewBox="0 0 24 24">
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M7.2 20.1 8.1 16.7A7.9 7.9 0 1 1 12 20a7.9 7.9 0 0 1-3.8-1l-1 .3Z"
+          />
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M9.8 9.6c.2-.5.5-.5.7-.5h.6c.2 0 .4 0 .5.4l.6 1.4c.1.2.1.4 0 .6l-.4.5c-.2.2-.1.4 0 .6.4.7 1 1.3 1.8 1.7.2.1.4.1.5 0l.6-.4c.2-.1.4-.1.6 0l1.3.6c.4.2.4.4.4.6v.6c0 .2-.1.5-.5.7-.5.2-1 .3-1.5.2-1-.2-2-.7-3.1-1.7-1.3-1.1-2-2.3-2.2-3.4-.1-.5 0-1 .3-1.4Z"
+          />
+        </svg>
+      );
+    case "instagram":
+      return (
+        <svg {...props} viewBox="0 0 24 24">
+          <rect x="4" y="4" width="16" height="16" rx="4" />
+          <circle cx="12" cy="12" r="3.5" />
+          <circle cx="16.5" cy="7.5" r="0.7" fill="currentColor" stroke="none" />
+        </svg>
+      );
+    case "facebook":
+      return (
+        <svg {...props} viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M14 8h2V4h-2.5C10.9 4 10 5.5 10 7.5V10H8v4h2v6h4v-6h2.3l.7-4H14V8Z" />
+        </svg>
+      );
     default:
       return null;
   }

@@ -1,7 +1,32 @@
 import { useEffect, useState } from "react";
 import PageHero from "../components/PageHero";
+import { Icon } from "../components/Icons";
 import SectionHeading from "../components/SectionHeading";
 import Reveal from "../components/Reveal";
+
+const socialLinks = [
+  {
+    label: "WhatsApp",
+    value: "+256 200 956455",
+    href: "https://wa.me/256200956455?text=Hello%20Doozy%20Designs",
+    icon: "whatsapp",
+    note: "Direct project inquiries"
+  },
+  {
+    label: "Instagram",
+    value: "@doozydesigns",
+    href: "#",
+    icon: "instagram",
+    note: "Add final handle"
+  },
+  {
+    label: "Facebook",
+    value: "Doozy Designs",
+    href: "#",
+    icon: "facebook",
+    note: "Add final page link"
+  }
+];
 
 function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
@@ -44,6 +69,53 @@ function ContactPage() {
                 >
                   Call +256 200 956455
                 </a>
+              </div>
+              <div className="glass-panel rounded-[1.8rem] p-6">
+                <div className="flex items-center justify-between gap-4">
+                  <div>
+                    <p className="text-xs uppercase tracking-[0.3em] text-gold">Quick Connect</p>
+                    <p className="mt-3 text-sm leading-7 text-[#244344] dark:text-[#d7efeb]">
+                      Reach the studio on WhatsApp now or plug in the final social handles before the official handoff.
+                    </p>
+                  </div>
+                  <a
+                    href="https://wa.me/256200956455?text=Hello%20Doozy%20Designs"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex h-14 w-14 shrink-0 items-center justify-center rounded-full border border-gold/40 bg-gold/10 text-gold transition hover:-translate-y-0.5 hover:bg-gold hover:text-[#073f40]"
+                    aria-label="Chat on WhatsApp"
+                  >
+                    <Icon name="whatsapp" className="h-6 w-6" />
+                  </a>
+                </div>
+                <div className="mt-6 grid gap-3">
+                  {socialLinks.map((item) => (
+                    <a
+                      key={item.label}
+                      href={item.href}
+                      target={item.href === "#" ? undefined : "_blank"}
+                      rel={item.href === "#" ? undefined : "noreferrer"}
+                      className="group flex items-center justify-between rounded-[1.3rem] border border-black/10 bg-white/40 px-4 py-4 transition hover:-translate-y-0.5 hover:border-gold/40 hover:bg-gold/10 dark:border-white/10 dark:bg-white/5"
+                    >
+                      <div className="flex items-center gap-4">
+                        <div className="flex h-11 w-11 items-center justify-center rounded-full border border-gold/25 bg-gold/10 text-gold">
+                          <Icon name={item.icon} className="h-5 w-5" />
+                        </div>
+                        <div>
+                          <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[#183738] dark:text-white">
+                            {item.label}
+                          </p>
+                          <p className="mt-1 text-sm text-[#4b6768] dark:text-[#c8dfdb]">
+                            {item.value}
+                          </p>
+                        </div>
+                      </div>
+                      <span className="text-[11px] uppercase tracking-[0.24em] text-[#4b6768] dark:text-[#c8dfdb]">
+                        {item.note}
+                      </span>
+                    </a>
+                  ))}
+                </div>
               </div>
             </Reveal>
           </div>
