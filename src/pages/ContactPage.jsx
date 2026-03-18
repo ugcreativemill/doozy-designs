@@ -121,65 +121,60 @@ function ContactPage() {
           </div>
 
           <Reveal>
-            <div className="glass-panel rounded-[2rem] p-8 shadow-luxe">
-              <form
-                className="grid gap-5"
-                onSubmit={(event) => {
-                  event.preventDefault();
-                  setSubmitted(true);
-                }}
-              >
-                <label className="grid gap-2">
-                  <span className="text-xs uppercase tracking-[0.28em] text-charcoal/55 dark:text-[#f7f1e8]/55">Name</span>
-                  <input
-                    type="text"
-                    placeholder="Your name"
-                    className="rounded-2xl border border-black/10 bg-white/70 px-5 py-4 outline-none transition focus:border-gold dark:border-white/10 dark:bg-white/5"
-                  />
-                </label>
-                <label className="grid gap-2">
-                  <span className="text-xs uppercase tracking-[0.28em] text-charcoal/55 dark:text-[#f7f1e8]/55">Email</span>
-                  <input
-                    type="email"
-                    placeholder="Your email"
-                    className="rounded-2xl border border-black/10 bg-white/70 px-5 py-4 outline-none transition focus:border-gold dark:border-white/10 dark:bg-white/5"
-                  />
-                </label>
-                <label className="grid gap-2">
-                  <span className="text-xs uppercase tracking-[0.28em] text-charcoal/55 dark:text-[#f7f1e8]/55">Message</span>
-                  <textarea
-                    rows="6"
-                    placeholder="Tell us about your project"
-                    className="rounded-[1.5rem] border border-black/10 bg-white/70 px-5 py-4 outline-none transition focus:border-gold dark:border-white/10 dark:bg-white/5"
-                  />
-                </label>
-                <button type="submit" className="button-primary mt-2 w-fit">
-                  Send Inquiry
-                </button>
-                {submitted ? (
-                  <p className="text-sm leading-7 text-charcoal/68 dark:text-[#f7f1e8]/68">
-                    Inquiry drafted. Connect this form to your preferred backend or email service to receive live submissions.
-                  </p>
-                ) : null}
-              </form>
-            </div>
-          </Reveal>
-        </div>
-      </section>
-
-      <section className="section-space pt-0">
-        <div className="shell">
-          <Reveal>
-            <div className="overflow-hidden rounded-[2rem] shadow-luxe">
-              <iframe
-                title="Doozy Designs map"
-                src="https://www.google.com/maps?q=Akamwesi%20Mall%20Room%20WW12%20Gayaza%20Road%20Kampala%20Uganda&z=14&output=embed"
-                width="100%"
-                height="460"
-                style={{ border: 0 }}
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              />
+            <div className="grid gap-8">
+              <div className="overflow-hidden rounded-[2rem] shadow-luxe">
+                <iframe
+                  title="Doozy Designs map"
+                  src="https://www.google.com/maps?q=Akamwesi%20Mall%20Room%20WW12%20Gayaza%20Road%20Kampala%20Uganda&z=14&output=embed"
+                  width="100%"
+                  height="420"
+                  style={{ border: 0 }}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
+              </div>
+              <div className="glass-panel rounded-[2rem] p-8 shadow-luxe">
+                <form
+                  className="grid gap-5"
+                  onSubmit={(event) => {
+                    event.preventDefault();
+                    setSubmitted(true);
+                  }}
+                >
+                  <label className="grid gap-2">
+                    <span className="text-xs uppercase tracking-[0.28em] text-charcoal/55 dark:text-[#f7f1e8]/55">Name</span>
+                    <input
+                      type="text"
+                      placeholder="Your name"
+                      className="rounded-2xl border border-black/10 bg-white/70 px-5 py-4 outline-none transition focus:border-gold dark:border-white/10 dark:bg-white/5"
+                    />
+                  </label>
+                  <label className="grid gap-2">
+                    <span className="text-xs uppercase tracking-[0.28em] text-charcoal/55 dark:text-[#f7f1e8]/55">Email</span>
+                    <input
+                      type="email"
+                      placeholder="Your email"
+                      className="rounded-2xl border border-black/10 bg-white/70 px-5 py-4 outline-none transition focus:border-gold dark:border-white/10 dark:bg-white/5"
+                    />
+                  </label>
+                  <label className="grid gap-2">
+                    <span className="text-xs uppercase tracking-[0.28em] text-charcoal/55 dark:text-[#f7f1e8]/55">Message</span>
+                    <textarea
+                      rows="6"
+                      placeholder="Tell us about your project"
+                      className="rounded-[1.5rem] border border-black/10 bg-white/70 px-5 py-4 outline-none transition focus:border-gold dark:border-white/10 dark:bg-white/5"
+                    />
+                  </label>
+                  <button type="submit" className="button-primary mt-2 w-fit">
+                    Send Inquiry
+                  </button>
+                  {submitted ? (
+                    <p className="text-sm leading-7 text-charcoal/68 dark:text-[#f7f1e8]/68">
+                      Inquiry drafted. Connect this form to your preferred backend or email service to receive live submissions.
+                    </p>
+                  ) : null}
+                </form>
+              </div>
             </div>
           </Reveal>
         </div>
