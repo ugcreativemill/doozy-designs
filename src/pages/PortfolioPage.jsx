@@ -38,13 +38,13 @@ function PortfolioPage() {
             title="Spaces with layered textures, sculpted light, and a polished visual rhythm."
             text="Filter by category to narrow the gallery."
           />
-          <div className="mb-10 flex flex-wrap gap-3">
+          <div className="mb-10 grid grid-cols-2 gap-3 sm:flex sm:flex-wrap">
             {filters.map((filter) => (
               <button
                 key={filter}
                 type="button"
                 onClick={() => setActiveFilter(filter)}
-                className={`rounded-full px-5 py-3 text-xs font-semibold uppercase tracking-[0.26em] transition duration-300 ${
+                className={`w-full rounded-full px-4 py-3 text-center text-xs font-semibold uppercase tracking-[0.24em] transition duration-300 sm:w-auto sm:px-5 sm:tracking-[0.26em] ${
                   activeFilter === filter
                     ? "bg-charcoal text-white dark:bg-[#f4ede2] dark:text-charcoal"
                     : "border border-black/10 text-[#224243] hover:border-gold hover:text-deepteal dark:border-white/10 dark:text-[#dff2ef]"
