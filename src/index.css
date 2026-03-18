@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-[#f3f7f6] font-sans text-charcoal antialiased transition-colors duration-500 dark:bg-[#062f30] dark:text-[#f7f1e8];
+    background-image:
+      radial-gradient(circle at top left, rgba(87, 210, 205, 0.20), transparent 28%),
+      radial-gradient(circle at bottom right, rgba(11, 111, 112, 0.16), transparent 24%);
+  }
+
+  * {
+    @apply border-white/10;
+  }
+
+  ::selection {
+    background: rgba(87, 210, 205, 0.35);
+  }
+}
+
+@layer components {
+  .shell {
+    @apply mx-auto w-full max-w-7xl px-6 sm:px-8 lg:px-12;
+  }
+
+  .section-space {
+    @apply py-20 sm:py-24 lg:py-28;
+  }
+
+  .glass-panel {
+    @apply border border-black/5 bg-white/70 backdrop-blur-xl dark:border-white/10 dark:bg-white/5;
+  }
+
+  .gold-line {
+    @apply h-px w-20 bg-gradient-to-r from-transparent via-gold to-transparent;
+  }
+
+  .button-primary {
+    @apply inline-flex items-center justify-center rounded-full border border-gold bg-deepteal px-6 py-3 text-sm font-semibold uppercase tracking-[0.24em] text-white transition duration-300 hover:-translate-y-0.5 hover:bg-pine dark:bg-[#d8f2ee] dark:text-[#073f40] dark:hover:bg-white;
+  }
+
+  .button-secondary {
+    @apply inline-flex items-center justify-center rounded-full border border-charcoal/15 px-6 py-3 text-sm font-semibold uppercase tracking-[0.24em] text-charcoal transition duration-300 hover:-translate-y-0.5 hover:border-gold hover:text-deepteal dark:border-white/20 dark:text-[#f4ede2] dark:hover:border-gold dark:hover:text-gold;
+  }
+
+  .nav-link {
+    @apply relative text-sm font-medium uppercase tracking-[0.22em] text-charcoal/75 transition duration-300 hover:text-charcoal dark:text-[#f4ede2]/70 dark:hover:text-white;
+  }
+
+  .nav-link::after {
+    content: "";
+    @apply absolute -bottom-2 left-0 h-px w-0 bg-gold transition-all duration-300;
+  }
+
+  .nav-link:hover::after,
+  .nav-link.active::after {
+    @apply w-full;
+  }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.page-enter {
+  animation: fadeUp 0.7s ease both;
+}
+
+.project-overlay {
+  background: linear-gradient(180deg, transparent 10%, rgba(17, 17, 17, 0.86) 100%);
+}
+
+.grain-bg {
+  background-size: 14px 14px;
+}
